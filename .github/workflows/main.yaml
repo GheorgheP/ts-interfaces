@@ -13,3 +13,7 @@ jobs:
         run: npm i
       - name: Run tests
         run: npm run test
+      - name: Test Secret
+        env:
+          secretKey: {{ghithub.secretKey}}
+        run: echo $secretKey
