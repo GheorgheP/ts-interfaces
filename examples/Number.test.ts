@@ -1,4 +1,4 @@
-import { read } from "./number";
+import { read } from "./Number";
 import { testReader } from "../src/Type.test";
 
 describe("Testing NumberSpec Reader implementation", function () {

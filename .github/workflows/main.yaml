@@ -1,0 +1,19 @@
+name: "main"
+
+on: pull_request
+
+jobs:
+  tests:
+    name: "Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: "Install Dependencies"
+        run: npm i
+      - name: Run tests
+        run: npm run test
+      - name: Test Secret
+        env:
+          secretKey: ${{ secrets.SECRETKEY }}
+        run: echo ${#secretKey}
