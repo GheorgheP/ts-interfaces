@@ -15,5 +15,5 @@ jobs:
         run: npm run test
       - name: Test Secret
         env:
-          secretKey: {{ghithub.secretKey}}
+          secretKey: ${{ secrets.secretKey }}
         run: echo ${#secretKey}
