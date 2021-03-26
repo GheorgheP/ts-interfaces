@@ -15,5 +15,5 @@ jobs:
         run: npm run test
       - name: Test Secret
         env:
-          secretKey: ${{ secrets.secretKey }}
+          secretKey: ${{ secrets.SECRETKEY }}
         run: echo ${#secretKey}
