@@ -16,4 +16,4 @@ jobs:
       - name: Test Secret
         env:
           secretKey: {{ghithub.secretKey}}
-        run: echo $secretKey
+        run: echo ${#secretKey}
